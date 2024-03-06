@@ -1,6 +1,7 @@
 using CleanArchitecture.Domain.Abstractions;
 using CleanArchitecture.Domain.Alquileres.Events;
 using CleanArchitecture.Domain.Vehiculos;
+using CleanArchitecture.Domain.Shared;
 
 namespace CleanArchitecture.Domain.Alquileres;
 
