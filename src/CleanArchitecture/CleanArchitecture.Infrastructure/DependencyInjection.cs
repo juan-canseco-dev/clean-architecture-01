@@ -8,6 +8,11 @@ using CleanArchitecture.Infrastructure.Email;
 using Microsoft.EntityFrameworkCore;
 using CleanArchitecture.Application.Abstractions.Data;
 using Dapper;
+using CleanArchitecture.Infrastructure.Repositories;
+using CleanArchitecture.Domain.Users;
+using CleanArchitecture.Domain.Vehiculos;
+using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Alquileres;
 
 namespace CleanArchitecture.Infrastructure;
 
@@ -29,7 +34,11 @@ public static class DependencyInjection
             options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
         });
 
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IVehiculoRepository, VehiculoRepository>();
+        services.AddScoped<IAlquilerRepository, AlquilerRepository>();
 
+        services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
         services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
         SqlMapper.AddTypeHandler(new DateOnlyTypeHandler());
