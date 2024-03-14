@@ -1,3 +1,5 @@
+namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+
 using CleanArchitecture.Application.Abstractions.Email;
 using CleanArchitecture.Domain.Alquileres;
 using CleanArchitecture.Domain.Alquileres.Events;

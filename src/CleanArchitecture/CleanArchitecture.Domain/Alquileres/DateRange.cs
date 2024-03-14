@@ -15,6 +15,8 @@ public sealed record DateRange
         return new DateRange(inicio, final);
     }
     
+    private DateRange() { }
+
     private DateRange(DateOnly inicio, DateOnly final) 
     {
         Inicio = inicio;

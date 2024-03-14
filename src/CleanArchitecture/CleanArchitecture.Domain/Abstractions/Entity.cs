@@ -17,6 +17,8 @@ public abstract class Entity
         _domainEvents.Add(domainEvent);
     }
 
+    protected Entity() {}
+
     protected Entity(Guid id) 
     {
         Id = id;

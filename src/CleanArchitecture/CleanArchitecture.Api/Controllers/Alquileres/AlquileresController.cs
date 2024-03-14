@@ -33,7 +33,7 @@ public class AlquileresController : ControllerBase
         AlquilerReservarRequest request,
         CancellationToken cancellationToken)
     {
-        var command = new AlquilerReservaCommand(
+        var command = new ReservarAlquilerCommand(
             request.VehiculoId,
             request.UserId,
             request.StartDate,

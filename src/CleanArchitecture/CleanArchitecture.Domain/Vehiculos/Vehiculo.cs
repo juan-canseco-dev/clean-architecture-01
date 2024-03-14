@@ -12,6 +12,9 @@ public sealed class Vehiculo : Entity
     public Moneda? Mantenimiento {get; private set;}
     public DateTime? FechaUltimaAlquiler {get; internal set;}
     public List<Accesorio> Accesorios {get; private set;} = new();
+
+    private Vehiculo() : base() { }
+
     public Vehiculo(
         Guid id,
         Modelo modelo, 

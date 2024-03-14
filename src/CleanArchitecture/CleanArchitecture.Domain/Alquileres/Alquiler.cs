@@ -119,6 +119,8 @@ public sealed class Alquiler : Entity
         return Result.Success();
     }
 
+    private Alquiler() : base() {}
+
     private Alquiler(
         Guid id,
         Guid vehiculoId,

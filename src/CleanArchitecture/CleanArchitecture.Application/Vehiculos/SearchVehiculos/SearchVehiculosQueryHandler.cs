@@ -22,17 +22,20 @@ internal sealed class SearchVehiculosQueryHandler : IQueryHandler<SearchVehiculo
         _sqlConnectionFactory = sqlConnectionFactory;
     }
 
-    public async Task<Result<IReadOnlyList<VehiculoResponse>>> Handle(SearchVehiculosQuery request, CancellationToken cancellationToken)
+    public async Task<Result<IReadOnlyList<VehiculoResponse>>> Handle(
+         SearchVehiculosQuery request,
+         CancellationToken cancellationToken
+     )
     {
         if (request.FechaInicio > request.FechaFin)
         {
-            return new List<VehiculoResponse>();   
+            return new List<VehiculoResponse>();
         }
 
         using var connection = _sqlConnectionFactory.CreateConnection();
 
-         const string sql = """
-             SELECT
+        const string sql = """
+               SELECT
                 a.id as Id,
                 a.modelo as Modelo,
                 a.vin as Vin,
@@ -49,27 +52,30 @@ internal sealed class SearchVehiculosQueryHandler : IQueryHandler<SearchVehiculo
                     SELECT 1 
                     FROM alquileres AS b
                     WHERE 
-                        b.vehiculo_id = a.id
+                        b.vehiculo_id = a.id  AND
                         b.duracion_inicio <= @EndDate AND
-                        b.duracion_final  >= @StartDate AND
+                        b.duracion_fin  >= @StartDate AND
                         b.status = ANY(@ActiveAlquilerStatuses)
-             )       
+             )      
         """;
-        
-        var vehiculos = await connection.QueryAsync<VehiculoResponse, DireccionResponse, VehiculoResponse>
-        (
-            sql,
-            (vehiculo, direccion) => {
-                vehiculo.Direccion = direccion;
-                return vehiculo;
-            },
-            new 
-            {
-                StartDate = request.FechaInicio,
-                EndDate = request.FechaFin,
-                ActiveAlquilerStatuses
-            }
-        );
+
+
+        var vehiculos = await connection
+            .QueryAsync<VehiculoResponse, DireccionResponse, VehiculoResponse>
+            (
+                sql,
+                (vehiculo, direccion) => {
+                    vehiculo.Direccion = direccion;
+                    return vehiculo;
+                },
+                new
+                {
+                    StartDate = request.FechaInicio,
+                    EndDate = request.FechaFin,
+                    ActiveAlquilerStatuses
+                },
+                splitOn: "Pais"
+            );
 
         return vehiculos.ToList();
     }

@@ -38,6 +38,9 @@ public sealed class Review : Entity
         return review;
     }
 
+    private Review() : base() 
+    {}
+
     private Review(
         Guid id,
         Guid vehiculoId,

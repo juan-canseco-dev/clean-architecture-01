@@ -1,4 +1,4 @@
-using Microsoft.ApiNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using CleanArchitecture.Application.Vehiculos.SearchVehiculos;
 
@@ -22,8 +22,8 @@ public class VehiculosController : ControllerBase
         CancellationToken cancellationToken
     )
     {
-        var query = new SearchVehiculoQuery(startDate, endDate);
+        var query = new SearchVehiculosQuery(startDate, endDate);
         var result = await _sender.Send(query, cancellationToken);
-        return Ok(result.Value)
+        return Ok(result.Value);
     }
 }

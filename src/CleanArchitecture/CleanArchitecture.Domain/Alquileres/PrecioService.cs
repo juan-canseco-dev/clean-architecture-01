@@ -19,7 +19,7 @@ public class PrecioService
         {
             porcentageCharge += accesorio switch
             {
-                Accesorio.AppleCAr or Accesorio.AndroidCard => 0.05m,
+                Accesorio.AppleCar or Accesorio.AndroidCard => 0.05m,
                 Accesorio.AireAcondicionado => 0.01m,
                 Accesorio.Mapas => 0.01m,
                 _ => 0m
