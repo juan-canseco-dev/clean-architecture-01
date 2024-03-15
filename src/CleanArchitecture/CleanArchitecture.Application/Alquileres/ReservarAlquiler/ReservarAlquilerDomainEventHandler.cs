@@ -21,7 +21,7 @@ internal sealed class ReservarAlquilerDomainEventHandler : INotificationHandler<
 
     public async Task Handle(AlquilerReservadoDomainEvent notification, CancellationToken cancellationToken)
     { 
-        var alquiler = await _alquilerRepository.GetByIdAsync(notification.alquilerId, cancellationToken);
+        var alquiler = await _alquilerRepository.GetByIdAsync(notification.AlquilerId, cancellationToken);
         if (alquiler is null) {
             return;
         }

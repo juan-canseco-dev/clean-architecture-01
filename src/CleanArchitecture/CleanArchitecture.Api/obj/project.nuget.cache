@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5tPlkMMWhySJukB1XB8VLmCZXz08T8P9bG7aZuVrTXIpruHLTP6ryIZp2z3+m1Bq8Y+s2oWTPS4HL6ho4U1etw==",
+  "dgSpecHash": "5UNLc4OiJoVrLqeM+tRobuir80PkduAnBgTkiKfIsDvkHT6WsMYr/hGWBLmgLClSVsXgQ0LmWBAGpStxpiAUOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juan-Canseco\\Workspace\\DotNet-Projects\\CleanArchitecture\\src\\CleanArchitecture\\CleanArchitecture.Api\\CleanArchitecture.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Juan-Canseco\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\dapper\\2.1.15\\dapper.2.1.15.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\efcore.namingconventions\\7.0.2\\efcore.namingconventions.7.0.2.nupkg.sha512",
