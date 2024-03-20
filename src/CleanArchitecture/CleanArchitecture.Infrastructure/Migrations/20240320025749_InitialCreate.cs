@@ -18,7 +18,8 @@ namespace CleanArchitecture.Infrastructure.Migrations
                     id = table.Column<Guid>(type: "uuid", nullable: false),
                     nombre = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
                     apellido = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
-                    email = table.Column<string>(type: "character varying(400)", maxLength: 400, nullable: true)
+                    email = table.Column<string>(type: "character varying(400)", maxLength: 400, nullable: true),
+                    password_hash = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -77,13 +78,13 @@ namespace CleanArchitecture.Infrastructure.Migrations
                 {
                     table.PrimaryKey("pk_alquileres", x => x.id);
                     table.ForeignKey(
-                        name: "fk_alquileres_user_user_id",
+                        name: "fk_alquileres_user_user_temp_id",
                         column: x => x.user_id,
                         principalTable: "users",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "fk_alquileres_vehiculo_vehiculo_id",
+                        name: "fk_alquileres_vehiculo_vehiculo_temp_id",
                         column: x => x.vehiculo_id,
                         principalTable: "vehiculos",
                         principalColumn: "id",
@@ -106,19 +107,19 @@ namespace CleanArchitecture.Infrastructure.Migrations
                 {
                     table.PrimaryKey("pk_reviews", x => x.id);
                     table.ForeignKey(
-                        name: "fk_reviews_alquileres_alquiler_id",
+                        name: "fk_reviews_alquileres_alquiler_id1",
                         column: x => x.alquiler_id,
                         principalTable: "alquileres",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "fk_reviews_user_user_id",
+                        name: "fk_reviews_user_user_temp_id",
                         column: x => x.user_id,
                         principalTable: "users",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "fk_reviews_vehiculo_vehiculo_id",
+                        name: "fk_reviews_vehiculo_vehiculo_temp_id",
                         column: x => x.vehiculo_id,
                         principalTable: "vehiculos",
                         principalColumn: "id",
