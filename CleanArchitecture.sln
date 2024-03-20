@@ -7,21 +7,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57519D4F-B97
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitecture", "CleanArchitecture", "{74A4030B-76AC-46BE-A5AA-720D62C0D82D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Domain", "src\CleanArchitecture\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj", "{589B752D-A81B-4219-9084-D709837ED036}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Domain", "src\CleanArchitecture\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj", "{589B752D-A81B-4219-9084-D709837ED036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Application", "src\CleanArchitecture\CleanArchitecture.Application\CleanArchitecture.Application.csproj", "{CBBFB478-EB22-4C57-B082-7A9993F6A58E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Application", "src\CleanArchitecture\CleanArchitecture.Application\CleanArchitecture.Application.csproj", "{CBBFB478-EB22-4C57-B082-7A9993F6A58E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Infrastructure", "src\CleanArchitecture\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj", "{3D6B2955-83F6-4070-9867-0DAFCC10B3A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Infrastructure", "src\CleanArchitecture\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj", "{3D6B2955-83F6-4070-9867-0DAFCC10B3A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Api", "src\CleanArchitecture\CleanArchitecture.Api\CleanArchitecture.Api.csproj", "{F7F66EBA-732E-495C-90D6-4D2803703539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Api", "src\CleanArchitecture\CleanArchitecture.Api\CleanArchitecture.Api.csproj", "{F7F66EBA-732E-495C-90D6-4D2803703539}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5F6C3C33-1E2A-426F-B05D-80CE22E91C20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{589B752D-A81B-4219-9084-D709837ED036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,6 +39,13 @@ Global
 		{F7F66EBA-732E-495C-90D6-4D2803703539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7F66EBA-732E-495C-90D6-4D2803703539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7F66EBA-732E-495C-90D6-4D2803703539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6C3C33-1E2A-426F-B05D-80CE22E91C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6C3C33-1E2A-426F-B05D-80CE22E91C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6C3C33-1E2A-426F-B05D-80CE22E91C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6C3C33-1E2A-426F-B05D-80CE22E91C20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{74A4030B-76AC-46BE-A5AA-720D62C0D82D} = {57519D4F-B97A-425B-9507-1DBAAFEDD995}
@@ -47,5 +53,8 @@ Global
 		{CBBFB478-EB22-4C57-B082-7A9993F6A58E} = {74A4030B-76AC-46BE-A5AA-720D62C0D82D}
 		{3D6B2955-83F6-4070-9867-0DAFCC10B3A2} = {74A4030B-76AC-46BE-A5AA-720D62C0D82D}
 		{F7F66EBA-732E-495C-90D6-4D2803703539} = {74A4030B-76AC-46BE-A5AA-720D62C0D82D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D356954-0E11-4CDC-B35B-8E18FF9E6DCA}
 	EndGlobalSection
 EndGlobal

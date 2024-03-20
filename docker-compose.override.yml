@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  cleanarchitecture.db:
+    container_name: cleanarchitecture.db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cleanarchitecture
+    restart: always
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  cleanarchitecture.api:
+    container_name: cleanarchitecture.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - "ConnectionStrings__ConnectionString=Host=cleanarchitecture.db;Port=5432;Database=cleanarchitecture;Username=postgres;Password=postgres;"
+    depends_on:
+      - cleanarchitecture.db
+    ports:
+      - 80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro

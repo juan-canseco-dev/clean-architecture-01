@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5UNLc4OiJoVrLqeM+tRobuir80PkduAnBgTkiKfIsDvkHT6WsMYr/hGWBLmgLClSVsXgQ0LmWBAGpStxpiAUOw==",
+  "dgSpecHash": "bLTzj1H8n9LyCBM/8d26bDkjDCjaa6CYZy6n5ONEHN9Dd/56b/zHHGm8A4k/vW0p1QfycueuTwVmqJay7fyQpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juan-Canseco\\Workspace\\DotNet-Projects\\CleanArchitecture\\src\\CleanArchitecture\\CleanArchitecture.Api\\CleanArchitecture.Api.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Juan-Canseco\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
     "C:\\Users\\Juan-Canseco\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
