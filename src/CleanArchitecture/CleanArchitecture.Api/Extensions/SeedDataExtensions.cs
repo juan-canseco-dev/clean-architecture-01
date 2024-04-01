@@ -1,5 +1,6 @@
 ﻿using Bogus;
 using CleanArchitecture.Application.Abstractions.Data;
+using CleanArchitecture.Domain.Roles;
 using CleanArchitecture.Domain.Users;
 using CleanArchitecture.Domain.Vehiculos;
 using CleanArchitecture.Infrastructure;
@@ -27,7 +28,8 @@ public static class SeedDataExtensions
                     new Nombre("Juan Pablo"),
                     new Apellido("Canseco"),
                     new Email("jcanseco@gmail.com"),
-                    new PasswordHash(myPasswordHash)
+                    new PasswordHash(myPasswordHash),
+                    Role.Cliente
                 );
 
 
@@ -36,7 +38,8 @@ public static class SeedDataExtensions
                     new Nombre("Admin"),
                     new Apellido("Admin"),
                     new Email("admin@gmail.com"),
-                    new PasswordHash(adminPasswordHash)
+                    new PasswordHash(adminPasswordHash),
+                    Role.Admin
                 );
 
                 context.Add(myUser);

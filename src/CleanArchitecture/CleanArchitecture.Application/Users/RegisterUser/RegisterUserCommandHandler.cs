@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.Application.Abstractions.Messaging;
 using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Roles;
 using CleanArchitecture.Domain.Users;
 
 namespace CleanArchitecture.Application.Users.RegisterUser;
@@ -27,11 +28,14 @@ internal class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand,
         
         var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
+        // By default user will be register with the role Cliente
+
         var user = User.Create(
             new Nombre(request.Nombre),
             new Apellido(request.Apellidos),
             new Email(request.Email),
-            new PasswordHash(passwordHash)
+            new PasswordHash(passwordHash),
+            Role.Cliente
         );
 
         _userRepository.Add(user);

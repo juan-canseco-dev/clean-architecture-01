@@ -37,6 +37,6 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasMany(x => x.Roles)
             .WithMany()
-            .UsingEntity<UserRoleConfiguration>();
+            .UsingEntity<UserRole>();
     }
 }
